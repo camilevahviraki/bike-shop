@@ -23,11 +23,11 @@ function Navbar() {
             <span>My Reservations</span>
           </NavLink>
 
-          <NavLink to="Add-Motorcycle" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}>
+          <NavLink to="AddItem" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}>
             <span>Add Item</span>
           </NavLink>
 
-          <NavLink to="Remove-Motorcycle" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}>
+          <NavLink to="RemoveItem" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}>
             <span>Remove Item</span>
           </NavLink>
         </div>
