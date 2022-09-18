@@ -1,0 +1,59 @@
+.d-flex {
+  display: flex;
+}
+  
+header {
+  padding: 10px;
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+  
+.navbar {
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.navTitle {
+  flex-direction: row;
+  gap: 20px;
+  margin-left: 50px;
+}
+  
+.navMenu {
+  margin-right: 80px;
+  gap: 20px;
+}
+
+.navMenu a {
+  cursor: pointer;
+}
+
+.active {
+  color: #002fff;
+  text-decoration: underline;
+}
+  
+.link {
+  color: #111;
+  text-decoration: none;
+}
+  
+@media screen and (max-width: 768px) {
+  d-flex {
+    display: none;
+  }
+
+  .navTitle {
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 20px;
+  }
+  
+  .navMenu {
+    display: none
+  }
+  
+  .logo {
+    width: 40%;
+    height: 40%;
+  }
+}
