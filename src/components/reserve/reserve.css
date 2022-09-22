@@ -1,0 +1,65 @@
+.image-radio-bike {
+    height: 100px;
+    width: auto;
+}
+
+.reserve-form {
+    margin-left: 25vw;
+}
+
+.reserve-bike-wrap {
+    width: 80%;
+    border: 1px solid rgb(214, 213, 213);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.div-div {
+    display: flex;
+    align-items: center;
+}
+
+.div-div p {
+    color: gray;
+    margin-left: 10px;
+}
+
+.year-reserve {
+   position: absolute;
+   bottom: 8px;
+   margin: 0;
+   left: 170px;
+   color: gray;
+}
+
+.Title-reserve {
+    margin-left: 10px;
+}
+
+.reserved-span {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: rgb(6, 128, 145);
+    position: absolute;
+    top: 10px;
+    left: 170px;
+}
+
+.hidden {
+    display: none;
+}
+
+.reserve-reserve-button {
+    position: absolute;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 20px;
+    right: 0;
+    color: #fff;
+    border: none;
+    background-color: green;
+}

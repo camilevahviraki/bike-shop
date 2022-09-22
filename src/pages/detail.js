@@ -1,10 +1,10 @@
 import React from 'react';
 import DetailPage from '../components/details/detail';
 
-function Detail() {
+function Details() {
   return (
     <DetailPage />
   );
 }
 
-export default Detail;
+export default Details;

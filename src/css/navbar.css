@@ -1,15 +1,21 @@
-.d-flex {
-  display: flex;
-}
-
-header {
-  padding: 10px;
-  border-bottom: 1px solid rgb(197, 197, 197);
+body {
+  font-family: Roboto, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .navbar {
-  align-items: center;
   justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  min-height: 100vh;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 17vw;
+  border-right: 1px solid rgb(214, 213, 213);
 }
 
 .navTitle {
@@ -19,22 +25,67 @@ header {
 }
 
 .navMenu {
-  margin-right: 80px;
   gap: 20px;
+  position: absolute;
+  top: 25vh;
+  display: flex;
+  flex-direction:column;
 }
 
 .navMenu a {
   cursor: pointer;
+  font-weight: 900;
+  color: rgba(2, 13, 22, 0.856);
 }
 
 .active {
-  color: #002fff;
-  text-decoration: underline;
+  color: #fff !important;
+  background-color: rgb(84, 121, 0);
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
 }
 
 .link {
   color: #111;
   text-decoration: none;
+}
+
+.see-account-img-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+}
+
+.see-account-img-wrap a:active {
+  background-color: #fff;
+}
+
+.see-account-img {
+  width: 30px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.user-avatar-wrap {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-avatar {
+  width: 70%;
+  height: auto;
+}
+
+.userAcoount-container {
+  width: 83vw;
+  margin-left: 17vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
