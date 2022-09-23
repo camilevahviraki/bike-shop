@@ -1,26 +1,27 @@
 import {useDispatch, useSelector} from 'react-redux';
-import sampleData from '../main/sampleRespone.json';
 import { removeMotorcycle } from '../../redux/main/motorcycles';
-// import './reserve.css';
 
 function RemoveItem() {
-  const sampleResponse = useSelector(state => state.motorcyclesReducer);
+  const motorcycles = useSelector(state => state.motorcyclesReducer);
+  const userToken = useSelector(state => state.authenticationReducer);
+  const myMotorcycles = motorcycles.filter(bike => bike.user_id !== userToken.user.id);
   const dispatch = useDispatch();
   const remove = (id) => {
-     dispatch(removeMotorcycle(id));
+     dispatch(removeMotorcycle(id, userToken.token));
   }
 
   console.log(useSelector(state => state.motorcyclesReducer))
   return (
     <div className="reserve-form">
+      <h2>My motorcycles</h2>
       {
-        sampleResponse ? (
+        myMotorcycles ? (
           <>{
-            sampleResponse.map((bike, key)=> {
+            myMotorcycles.map((bike, key)=> {
               return (
                 <div className="reserve-bike-wrap">
                       <div className="div-div">
-                        <img src={bike.image.url} alt="" className="image-radio-bike"/>
+                        <img src={bike.image} alt="" className="image-radio-bike"/>
                         <h5 className='Title-reserve'>{bike.brand} {bike.model}</h5>
                         <p>${bike.booking_fee}</p>
                         <p className="year-reserve">Year: {bike.year}</p>

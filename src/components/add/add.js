@@ -5,6 +5,7 @@ import avatarImg from '../../icons/bike-icon.png';
 import './add.css';
 
 function AddItem() {
+  const userDetails = useSelector(state => state.authenticationReducer)
   const [avatar, setAvatar] = useState(avatarImg);
   const [image, setImage] = useState(null);
   const dispatch = useDispatch();
@@ -19,10 +20,10 @@ function AddItem() {
       booking_fee: e.target.bookingfee.value,
       description: e.target.description.value,
       reserved: false,
-      user_id: 1,  // Current_user ID
+      user_id: userDetails.user.id,
     }
-    console.log(motorcycleParams)
-    dispatch(addMotorcycle(motorcycleParams));
+    const token = userDetails.token
+    dispatch(addMotorcycle(motorcycleParams, token));
   }
 
   const handleUpload = (e) => {

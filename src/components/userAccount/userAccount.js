@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { connect } from 'react-redux';
 import userAvatar from '../../icons/user-avatar.jpg';
+import { setNavVisible } from '../../redux/navbar/navbar';
 
-export default class UserAccount extends Component {
+class UserAccount extends Component {
     constructor(props){
         super(props)
         this.state = {
-            userCredentials: {},
+            userCredentials: 'username',
             loggedOut: false,
         }
     }
 
   componentDidMount(){
     const savedData = JSON.parse(localStorage.getItem('userData'));
-    this.setState({userCredentials: savedData});
+    if(savedData.user){
+        this.setState({userCredentials: savedData.user.username});
+    }
   }
 
   logout =  () => {
-    localStorage.setItem('userData', '{}');
-    this.setState({loggedOut: true});
-    // Location.reoload();
+    // localStorage.setItem('userData', '{}');
+    // this.setState({loggedOut: true});
   }
 
   render() {
     const {user} = this.state.userCredentials;
-    // const {username} = user; 
+    console.log('user', this.state.userCredentials);
     if(this.state.loggedOut){
         return (
             <Navigate to="../login"/>
@@ -32,16 +35,30 @@ export default class UserAccount extends Component {
     }
     return (
       <div className='userAcoount-container'>
-         <button type='button'
-          onClick={() => this.logout()}
-         >
-            Logout
-         </button>
+          <Link to="/" onClick={() => this.props.setNavVisible(true)}>
+            {"< Back To Menu"}
+          </Link>
          <div className='user-avatar-wrap'>
             <img src={userAvatar} alt="" className='user-avatar'/>
          </div>
-         {/* <h2>{user.username}</h2> */}
+         <h2 className="UserName">{this.props.userLoged.user.username}</h2>
+         <button type='button'
+          onClick={() => this.logout()}
+          className="logOut"
+         >
+            Logout
+         </button>
       </div>
     )
   }
 }
+
+const mapState = (state) => ({
+   userLoged: state.authenticationReducer,
+})
+
+const mapDispatch = (dispatch) => ({
+  setNavVisible: (bool) => dispatch(setNavVisible(bool)),
+})
+
+export default connect(mapState, mapDispatch)(UserAccount);

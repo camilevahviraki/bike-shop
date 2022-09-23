@@ -1,19 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import useAvatar from '../icons/avatar_account.png';
+import { setNavVisible } from '../redux/navbar/navbar';
 import '../css/navbar.css';
 
 function Navbar() {
+  const navVisible = useSelector(state => state.IsNavbarVisible.status);
+  const dispatch = useDispatch();
   return (
     <header>
-      <div className="navbar">
+      <div className="navbar" style={navVisible? {display: 'flex'}:{display: 'none'}}>
         <div className="navTitle">
           <h1>Bike Shop</h1>
-        </div>
-        <div className='see-account-img-wrap'>
-          <NavLink to="user">
-            <img src={useAvatar} alt="" className='see-account-img' />
-          </NavLink>
         </div>
 
         <div className="navMenu">
@@ -38,6 +37,11 @@ function Navbar() {
           </NavLink>
         </div>
       </div>
+      <div className='see-account-img-wrap'>
+          <Link to="user" onClick={() => dispatch(setNavVisible(false))}>
+            <img src={useAvatar} alt="" className='see-account-img' />
+          </Link>
+        </div>
     </header>
   );
 }

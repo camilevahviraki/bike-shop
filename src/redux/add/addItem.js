@@ -11,9 +11,14 @@ const addMotorCycleReducer = (state = {}, action) => {
   }
 };
 
-export const addMotorcycle = (newMotorcycle) => (dispatch) => {
+export const addMotorcycle = (newMotorcycle, token) => (dispatch) => {
   axios.post('http://localhost:3000/api/v1/motorcycle', {
     motorcycle: newMotorcycle,
+  },
+  {
+    headers: {
+      Authorization: 'Bearer ' + token
+     }
   })
     .then((response) => dispatch(
       {

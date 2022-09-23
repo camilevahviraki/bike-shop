@@ -1,13 +1,15 @@
 import {useDispatch, useSelector} from 'react-redux';
 import sampleData from '../main/sampleRespone.json';
 import { reserveMotorcycle } from '../../redux/main/motorcycles';
+import ReserveItem from './reserveForm';
 import './reserve.css';
 
 function ReserveForm() {
   const sampleResponse = useSelector(state => state.motorcyclesReducer)
+  const token = useSelector(state => state.authenticationReducer.token)
   const dispatch = useDispatch();
   const reserve = (id) => {
-     dispatch(reserveMotorcycle(id));
+     dispatch(reserveMotorcycle(id, token));
   }
 
   // console.log(useSelector(state => state.reserveReducer))
@@ -43,6 +45,7 @@ function ReserveForm() {
         ):
         (<h2>...loading</h2>)
       }
+      <ReserveItem />
     </div>
   );
 }

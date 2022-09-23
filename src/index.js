@@ -16,7 +16,7 @@ const AppContainer = () => {
       isLogedIn = false;
       messade = "1"
     }else if(JSON.parse(savedData).user){
-      setUserData(JSON.parse(localStorage.getItem("userData")));
+      // setUserData(JSON.parse(localStorage.getItem("userData")));
       isLogedIn = true;
       messade = "2"
     }else{

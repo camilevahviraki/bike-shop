@@ -10,8 +10,15 @@ const authenticationReducer = (state = {}, action) => {
     }     
     case USER_SIGNUP: 
       return action.user;
-    default:
+    default:{
+      const savedData = localStorage.getItem("userData");
+      if(savedData){
+        if(savedData.includes('token')){
+          return JSON.parse(savedData);
+        }
+      }
       return state;
+    }
   }
 };
 

@@ -5,12 +5,14 @@ import motorcyclesReducer from './main/motorcycles';
 import addMotorCycleReducer from './add/addItem';
 import detailsMotorcycleReducer from './details/details';
 import authenticationReducer from './authentication/login';
+import IsNavbarVisible from './navbar/navbar';
 
 const rootReducer = combineReducers({
   motorcyclesReducer,
   addMotorCycleReducer,
   detailsMotorcycleReducer,
   authenticationReducer,
+  IsNavbarVisible,
 });
 
 const store = createStore(

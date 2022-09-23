@@ -7,10 +7,10 @@ import './main.css';
  
 function MainPage() {
   console.log("fetched =>", useSelector((state) => state.motorcyclesReducer));
-   
+  const token = useSelector((state) => state.authenticationReducer.token);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchMotorcycles());
+    dispatch(fetchMotorcycles(token));
   }, []);
 
   let sampleResponse = useSelector((state) => state.motorcyclesReducer)

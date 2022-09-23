@@ -69,23 +69,44 @@ body {
 }
 
 .user-avatar-wrap {
-  width: 500px;
-  height: 500px;
+  margin-top: 70px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
 }
 
 .user-avatar {
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
 .userAcoount-container {
-  width: 83vw;
-  margin-left: 17vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(45deg, rgba(0, 6, 12, 0.973) 0.81%, rgba(110, 111, 112, 0.9) 84.03%);
+}
+
+.userAcoount-container a {
+  position: absolute;
+  left: 30px;
+  color: #fff;
+  text-decoration: none;
+  top: 30px;
+}
+
+.UserName {
+  color: #fff;
+}
+
+.logOut {
+  padding: 7px 12px;
+  border: none;
+  background-color: rgba(230, 141, 8, 0.795);
 }
 
 @media screen and (max-width: 768px) {

@@ -28,8 +28,14 @@ const motorcyclesReducer = (state = [], action) => {
   }
 };
 
-export const fetchMotorcycles = () => (dispatch) => {
-  axios.get('http://localhost:3000/api/v1/motorcycle')
+export const fetchMotorcycles = (varToken) => (dispatch) => {
+  axios.get('http://localhost:3000/api/v1/motorcycle',
+  {
+    headers: {
+      Authorization: 'Bearer ' + varToken
+     }
+  }
+  )
     .then((response) => dispatch(
       {
         type: MOTORCYCLES,
@@ -38,8 +44,13 @@ export const fetchMotorcycles = () => (dispatch) => {
     ));
 };
 
-export const removeMotorcycle = (id) => (dispatch) => {
-  axios.delete(`http://localhost:3000/api/v1/motorcycle/${id}`)
+export const removeMotorcycle = (id, token) => (dispatch) => {
+  axios.delete(`http://localhost:3000/api/v1/motorcycle/${id}`,
+  {
+    headers: {
+      Authorization: 'Bearer ' + token
+     }
+  })
     .then((response) => dispatch(
       {
         type: DELETE_MOTORCYCLES,
@@ -48,10 +59,16 @@ export const removeMotorcycle = (id) => (dispatch) => {
     ));
 };
 
-export const reserveMotorcycle = (id) => (dispatch) => {
-  axios.put(`http://localhost:3000/api/v1/reservations/${id}`,{
+export const reserveMotorcycle = (id, token) => (dispatch) => {
+  axios.put(`http://localhost:3000/api/v1/reservation/${id}`,{
     motorcycle_id: id, 
-  })
+  },
+  {
+    headers: {
+      Authorization: 'Bearer ' + token
+     }
+  }
+  )
     .then((response) => dispatch(
       {
         type: RESERVE_BIKE,
