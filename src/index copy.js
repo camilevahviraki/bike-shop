@@ -6,21 +6,18 @@ import store from './redux/store';
 import App from './App';
 import Login from './components/authentication/login';
 
-const AppContainer = () => {
-
-  return(
-    <>
-      <BrowserRouter>
-        <App/>
-      </BrowserRouter>
-    </>
-  )
-}
+const AppContainer = () => (
+  <>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </>
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-      <AppContainer/>
+    <AppContainer />
   </Provider>,
 );
 
