@@ -6,11 +6,11 @@ import { setNavVisible } from '../redux/navbar/navbar';
 import '../css/navbar.css';
 
 function Navbar() {
-  const navVisible = useSelector(state => state.IsNavbarVisible.status);
+  const navVisible = useSelector((state) => state.IsNavbarVisible.status);
   const dispatch = useDispatch();
   return (
     <header>
-      <div className="navbar" style={navVisible? {display: 'flex'}:{display: 'none'}}>
+      <div className="navbar" style={navVisible ? { display: 'flex' } : { display: 'none' }}>
         <div className="navTitle">
           <h1>Bike Shop</h1>
         </div>
@@ -37,11 +37,11 @@ function Navbar() {
           </NavLink>
         </div>
       </div>
-      <div className='see-account-img-wrap'>
-          <Link to="user" onClick={() => dispatch(setNavVisible(false))}>
-            <img src={useAvatar} alt="" className='see-account-img' />
-          </Link>
-        </div>
+      <div className="see-account-img-wrap">
+        <Link to="user" onClick={() => dispatch(setNavVisible(false))}>
+          <img src={useAvatar} alt="" className="see-account-img" />
+        </Link>
+      </div>
     </header>
   );
 }
