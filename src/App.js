@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Main from './components/main/main';
 import Reserve from './components/reserve/reserve';
 import Reservation from './pages/myreserve';
@@ -12,23 +13,29 @@ import Signup from './components/authentication/signup';
 import UserAccount from './components/userAccount/userAccount';
 
 function App() {
-  
-  const currentDetailsLink = localStorage.getItem("detailsLink");
- 
+  let detailsLink = '';
+  const storedLink = localStorage.getItem('detailsLink');
+  const currentDetailsLink = useSelector((state) => state.currentLinkReducer);
+  if (currentDetailsLink === 'details') {
+    detailsLink = storedLink;
+  } else {
+    detailsLink = currentDetailsLink;
+  }
+
   return (
     <>
-      <Navbar />   
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path={currentDetailsLink} element={<Details />} />
-          <Route path="reserve" element={<Reserve />} />
-          <Route path="MyReservation" element={<Reservation />} />
-          <Route path="AddItem" element={<AddItem />} />
-          <Route path="RemoveItem" element={<RemoveItem />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="user" element={<UserAccount />} />
-        </Routes>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path={detailsLink} element={<Details />} />
+        <Route path="reserve" element={<Reserve />} />
+        <Route path="MyReservation" element={<Reservation />} />
+        <Route path="AddItem" element={<AddItem />} />
+        <Route path="RemoveItem" element={<RemoveItem />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Main />} />
+        <Route path="user" element={<UserAccount />} />
+      </Routes>
     </>
   );
 }
