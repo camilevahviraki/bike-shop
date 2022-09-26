@@ -3,9 +3,10 @@ import thunk from './logger/logger';
 import logger from './logger/thunk';
 import motorcyclesReducer from './main/motorcycles';
 import addMotorCycleReducer from './add/addItem';
-import detailsMotorcycleReducer from './details/details';
+import detailsMotorcycleReducer, { currentLinkReducer } from './details/details';
 import authenticationReducer from './authentication/login';
 import IsNavbarVisible from './navbar/navbar';
+import getReservationsReducer from './reservations/reservetions';
 
 const rootReducer = combineReducers({
   motorcyclesReducer,
@@ -13,6 +14,8 @@ const rootReducer = combineReducers({
   detailsMotorcycleReducer,
   authenticationReducer,
   IsNavbarVisible,
+  currentLinkReducer,
+  getReservationsReducer,
 });
 
 const store = createStore(

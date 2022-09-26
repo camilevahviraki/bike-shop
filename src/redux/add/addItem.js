@@ -1,4 +1,5 @@
 import axios from 'axios';
+import linkURL from '../url';
 
 const NEW_MOTORCYCLE = '/redux/NEW_MOTORCYCLE';
 
@@ -12,14 +13,13 @@ const addMotorCycleReducer = (state = {}, action) => {
 };
 
 export const addMotorcycle = (newMotorcycle, token) => (dispatch) => {
-  axios.post('http://localhost:3000/api/v1/motorcycle', {
-    motorcycle: newMotorcycle,
-  },
-  {
-    headers: {
-      Authorization: 'Bearer ' + token
-     }
-  })
+  axios.post(`${linkURL}/api/v1/motorcycle`,
+    newMotorcycle,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     .then((response) => dispatch(
       {
         type: NEW_MOTORCYCLE,

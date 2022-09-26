@@ -1,7 +1,18 @@
 import axios from 'axios';
+import linkURL from '../url';
 
 const DETAILS_MOTORCYCLE = '/redux/DETAILS_MOTORCYCLE';
 const RESERVE_BIKE_DETAILS = '/redux/RESERVE_BIKE_DETAILS';
+const CURRENT_DETAILS_LINK = '/redux/CURRENT_DETAILS_LINK';
+
+export const currentLinkReducer = (state = 'details', action) => {
+  switch (action.type) {
+    case CURRENT_DETAILS_LINK:
+      return action.link;
+    default:
+      return state;
+  }
+};
 
 const detailsMotorcycleReducer = (state = {}, action) => {
   switch (action.type) {
@@ -9,17 +20,24 @@ const detailsMotorcycleReducer = (state = {}, action) => {
       return action.motorcycle;
     case RESERVE_BIKE_DETAILS: {
       let newState = state;
-      newState.reserved = !newState.reserved
-      newState = {...newState, updated: true}
+      newState.reserved = !newState.reserved;
+      newState = { ...newState, updated: true };
       return newState;
-    }  
+    }
     default:
       return state;
   }
 };
 
+export const setDetailsLink = (link) => (dispatch) => {
+  dispatch({
+    type: CURRENT_DETAILS_LINK,
+    link,
+  });
+};
+
 export const detailsMotorcycle = (id) => (dispatch) => {
-  axios.get(`http://localhost:3000/api/v1/motorcycle/${id}`)
+  axios.get(`${linkURL}/api/v1/motorcycle/${id}`)
     .then((response) => dispatch(
       {
         type: DETAILS_MOTORCYCLE,
@@ -29,8 +47,8 @@ export const detailsMotorcycle = (id) => (dispatch) => {
 };
 
 export const reserveMotorcycle = (id) => (dispatch) => {
-  axios.put(`http://localhost:3000/api/v1/reservations/${id}`,{
-    motorcycle_id: id, 
+  axios.put(`${linkURL}/api/v1/reservations/${id}`, {
+    motorcycle_id: id,
   })
     .then((response) => dispatch(
       {
