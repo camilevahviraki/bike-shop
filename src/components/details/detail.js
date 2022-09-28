@@ -36,7 +36,7 @@ class Details extends Component {
           <div className="details-wrapper">
             <div>
               <div className="details-Image-wrap">
-                <img src={detailsData.image ? detailsData.image : avaterImg} alt="" className="details-Image" />
+                <img src={detailsData.image_url ? detailsData.image_url : avaterImg} alt="" className="details-Image" />
               </div>
             </div>
             <div className="detailsMenuItem">

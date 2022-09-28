@@ -74,7 +74,7 @@ function MainPage() {
             >
               <div>
                 <div className="bike-image-wrap">
-                  <img src={bike.image ? bike.image : avaterImg} alt="" className="bike-image" />
+                  <img src={bike.image_url ? bike.image_url : avaterImg} alt="" className="bike-image" />
                 </div>
               </div>
               <h3>

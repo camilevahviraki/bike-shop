@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeMotorcycle, fetchMotorcycles } from '../../redux/main/motorcycles';
 import avatarBike from '../../icons/bike-icon.png';
@@ -16,7 +16,8 @@ function RemoveItem() {
     dispatch(removeMotorcycle(id, userToken.token));
   };
 
-  console.log('motorcycles', motorcycles);
+  const [showDelete, setShowDelete] = useState(null);
+
   return (
     <div className="reserve-form">
       <h2>My motorcycles</h2>
@@ -24,10 +25,10 @@ function RemoveItem() {
         myMotorcycles ? (
           <>
             {
-            myMotorcycles.map((bike) => (
-              <div className="reserve-bike-wrap">
+            myMotorcycles.map((bike, key) => (
+              <div className="reserve-bike-wrap" onMouseOver={() => setShowDelete(key)} onMouseLeave={() => setShowDelete(null)}>
                 <div className="div-div">
-                  <img src={bike.image ? bike.image : avatarBike} alt="" className="image-radio-bike" />
+                  <img src={bike.image_url ? bike.image_url : avatarBike} alt="" className="image-radio-bike" />
                   <h5 className="Title-reserve">
                     {bike.brand}
                     {' '}
@@ -42,13 +43,17 @@ function RemoveItem() {
                     {bike.year}
                   </p>
                 </div>
-                <button
+               {
+                showDelete === key ? (
+                  <button
                   type="button"
                   className="reserve-reserve-button"
                   onClick={() => remove(bike.id)}
                 >
-                  Remove
+                  Delete
                 </button>
+                ):(<></>)
+               }
               </div>
 
             ))

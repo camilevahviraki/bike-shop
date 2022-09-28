@@ -73,3 +73,50 @@
   margin-left: 8%;
   margin-top: 8%;
 }
+
+@media screen and (max-width: 768px) {
+  .form-add-new-bike {
+    margin: 0;
+    margin-left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .image-avatar-wrap {
+    top: 70px;
+    left: 60%;
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 8;
+  }
+
+  .top-field {
+    margin-top: 210px !important;
+  }
+
+  .input-wrap {
+    width: 98%;
+    display: flex;
+    margin: 10px 0;
+  }
+
+  .input-wrap label {
+    padding: 10px;
+    color: rgb(252, 252, 252);
+    font-weight: 800;
+    width: 50px;
+    font-size: 13px;
+    border-radius: 16px;
+    background-color: rgb(122, 122, 122);
+    margin-right: 20px;
+  }
+}

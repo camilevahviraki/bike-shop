@@ -1,5 +1,6 @@
 .main-page-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   height: 100vh;
   margin-left: 26vw;
@@ -71,4 +72,41 @@
   color: rgba(128, 128, 128, 0.651);
   margin-top: 0;
   text-align: center;
+}
+
+.next-previous-wrap {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .main-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 50px;
+  }
+
+  .motorcycle_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+    width: 80vw;
+    height: auto;
+  }
+
+  .bike-image-wrap {
+    width: 40vw;
+    height: auto;
+    border-radius: 20%;
+    overflow: hidden;
+  }
+
+  .next-previous-wrap {
+    display: none;
+  }
 }

@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import userAvatar from '../../icons/user-avatar.jpg';
 import { setNavVisible } from '../../redux/navbar/navbar';
 import {userLogout} from '../../redux/authentication/login';
+import './userAccount.css';
 
 class UserAccount extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class UserAccount extends Component {
     }
     return (
       <div className="userAcoount-container">
-        <Link to="/" onClick={() => this.props.setNavVisible(true)}>
+        <Link to="../main" onClick={() => this.props.setNavVisible(true)}>
           {'< Back To Menu'}
         </Link>
         <div className="user-avatar-wrap">

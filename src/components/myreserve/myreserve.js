@@ -30,7 +30,7 @@ function ReservePage() {
         onMouseLeave={() => showDelete(null)}
       >
         <div className="reservation-container top-line">
-          <p>
+          <p className='reservation-image'>
             Image
           </p>
           <p className="reservation-brand">
@@ -68,7 +68,7 @@ function ReservePage() {
             >
               <div className="reservation-container">
                 <div className="reservation-image-wrap">
-                  <img src={bike.image ? bike.image : avatarBike} alt="" className="reservation-image" />
+                  <img src={bike.image_url ? bike.image_url : avatarBike} alt="" className="reservation-image" />
                 </div>
                 <p className="reservation-brand">
                   {bike.brand}

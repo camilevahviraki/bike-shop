@@ -43,7 +43,7 @@ class ReserveItem extends Component {
               </div>
             </div>
             <div className="image-popup-wrap">
-              <img src={this.props.bike.image ? this.props.bike.image : avaterImg} alt="" className="image-popup" />
+              <img src={this.props.bike.image_url ? this.props.bike.image_url : avaterImg} alt="" className="image-popup" />
             </div>
             <h2 className="popup-txt">
               Brand:

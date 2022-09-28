@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Poppins:ital,wght@0,100;0,500;0,600;0,700;0,800;1,100;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap');
+
 .splashScreen {
   width: 100vw;
   height: 100vh;
@@ -25,14 +27,17 @@
 .splashScreen a:hover {
   color: #fff;
   background-color: rgba(5, 44, 68, 0.767);
+  background-image: url('../../icons/splashScreen-abstract.png');
+  background-size: 100%;
   border: 3px #fff solid;
 }
 
-.splashScreen p {
+.p-laptop {
   z-index: 10;
   color: #fff;
   width: 50%;
   text-align: center;
+  display: flex;
 }
 
 .splashScreen-overlay {
@@ -46,4 +51,21 @@
   color: #fff;
   z-index: 10;
   margin-top: 45vh;
+}
+
+.p-phone {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .p-laptop {
+    display: none;
+  }
+
+  .p-phone {
+    display: flex;
+    /* color: #fff; */
+    width: 90%;
+    text-align: center;
+  }
 }

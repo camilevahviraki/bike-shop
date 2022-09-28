@@ -63,3 +63,31 @@
   border: none;
   background-color: green;
 }
+
+.booking-fee-reserve {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .reserve-form {
+    margin-left: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booking-fee-reserve {
+    position: absolute;
+    bottom: 8px;
+    left: 120px;
+  }
+
+  .year-reserve {
+    position: absolute;
+    bottom: 8px;
+    margin: 0;
+    left: 170px;
+    color: gray;
+  }
+}
