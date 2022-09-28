@@ -10,8 +10,8 @@ function Navbar() {
   const dispatch = useDispatch();
   const [mobileNav, setMobileNav] = useState(false);
   const showNavBar = () => {
-     setMobileNav(!mobileNav);
-  }
+    setMobileNav(!mobileNav);
+  };
   return (
     <header>
       <div className="navbar" style={navVisible ? { display: 'flex' } : { display: 'none' }}>
@@ -42,57 +42,66 @@ function Navbar() {
         </div>
       </div>
       <div className="navbar-mobile" style={navVisible ? { display: 'flex' } : { display: 'none' }}>
-        <div className='hamburger-wrap'>
-           <div className='hamburger' onClick={showNavBar} style={mobileNav?{display: 'none'}:{display: 'block'}}>
-              <div />
-              <div />
-              <div />
-           </div>
+        <div className="hamburger-wrap">
+          <div className="hamburger" onClick={showNavBar} style={mobileNav ? { display: 'none' } : { display: 'block' }}>
+            <div />
+            <div />
+            <div />
+          </div>
         </div>
         {
           mobileNav ? (
             <>
-            <div className="close-nav" onClick={showNavBar}>
-              <div className="close-nav-child">
-                <div className="child1 black" />
-                <div className="child2 black" />
+              <div className="close-nav" onClick={showNavBar}>
+                <div className="close-nav-child">
+                  <div className="child1 black" />
+                  <div className="child2 black" />
+                </div>
               </div>
-            </div>
-       
 
-              <div className="navMenu-mobile" >
-          <NavLink to="main" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
-            onClick={() => setMobileNav(false)}
-          >
-            <span>MOTORCYCLES</span>
-          </NavLink>
+              <div className="navMenu-mobile">
+                <NavLink
+                  to="main"
+                  className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
+                  onClick={() => setMobileNav(false)}
+                >
+                  <span>MOTORCYCLES</span>
+                </NavLink>
 
-          <NavLink to="Reserve" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
-            onClick={() => setMobileNav(false)}
-          >
-            <span>RESERVE</span>
-          </NavLink>
+                <NavLink
+                  to="Reserve"
+                  className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
+                  onClick={() => setMobileNav(false)}
+                >
+                  <span>RESERVE</span>
+                </NavLink>
 
-          <NavLink to="MyReservation" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
-            onClick={() => setMobileNav(false)}
-          >
-            <span>MY RESERVATIONS</span>
-          </NavLink>
+                <NavLink
+                  to="MyReservation"
+                  className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
+                  onClick={() => setMobileNav(false)}
+                >
+                  <span>MY RESERVATIONS</span>
+                </NavLink>
 
-          <NavLink to="AddItem" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
-            onClick={() => setMobileNav(false)}
-          >
-            <span>ADD ITEM</span>
-          </NavLink>
+                <NavLink
+                  to="AddItem"
+                  className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
+                  onClick={() => setMobileNav(false)}
+                >
+                  <span>ADD ITEM</span>
+                </NavLink>
 
-          <NavLink to="RemoveItem" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
-             onClick={() => setMobileNav(false)}
-          >
-            <span>REMOVE ITEM</span>
-          </NavLink>
-          </div>
+                <NavLink
+                  to="RemoveItem"
+                  className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}
+                  onClick={() => setMobileNav(false)}
+                >
+                  <span>REMOVE ITEM</span>
+                </NavLink>
+              </div>
             </>
-          ):(<></>)
+          ) : (<></>)
         }
       </div>
       <div className="see-account-img-wrap" onClick={() => setMobileNav(false)}>

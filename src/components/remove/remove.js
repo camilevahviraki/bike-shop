@@ -26,7 +26,12 @@ function RemoveItem() {
           <>
             {
             myMotorcycles.map((bike, key) => (
-              <div className="reserve-bike-wrap" onMouseOver={() => setShowDelete(key)} onMouseLeave={() => setShowDelete(null)}>
+              <div
+                className="reserve-bike-wrap"
+                onMouseOver={() => setShowDelete(key)}
+                onMouseLeave={() => setShowDelete(null)}
+                key={bike.id}
+              >
                 <div className="div-div">
                   <img src={bike.image_url ? bike.image_url : avatarBike} alt="" className="image-radio-bike" />
                   <h5 className="Title-reserve">
@@ -43,16 +48,16 @@ function RemoveItem() {
                     {bike.year}
                   </p>
                 </div>
-               {
+                {
                 showDelete === key ? (
                   <button
-                  type="button"
-                  className="reserve-reserve-button"
-                  onClick={() => remove(bike.id)}
-                >
-                  Delete
-                </button>
-                ):(<></>)
+                    type="button"
+                    className="reserve-reserve-button"
+                    onClick={() => remove(bike.id)}
+                  >
+                    Delete
+                  </button>
+                ) : (<></>)
                }
               </div>
 

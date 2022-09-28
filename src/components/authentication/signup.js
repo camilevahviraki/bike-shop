@@ -33,7 +33,6 @@ class Signup extends Component {
   }
 
   render() {
-    console.log('Signup Token =>', this.props.authToken);
     if (this.props.isSignedUp.status) {
       return (<Navigate to="../main" />);
     }

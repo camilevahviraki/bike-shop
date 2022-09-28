@@ -62,6 +62,7 @@ function MainPage() {
         ? motorCycles.map((bike, key) => (
           <Link
             to={`${bike.brand}-${bike.model}`.split(' ').join('-')}
+            key={bike.id}
             onClick={() => {
               dispatch(setDetailsLink(`${bike.brand}-${bike.model}`.split(' ').join('-')));
               localStorage.setItem('detailsLink', `${bike.brand}-${bike.model}`.split(' ').join('-'));

@@ -31,9 +31,6 @@ function AddItem() {
 
     const { token } = userDetails;
     dispatch(addMotorcycle(motorcycleParams, token));
-    console.log('+++++++++++++++++++++++++++++');
-    console.log('added?', motorcycleParams);
-    console.log('+++++++++++++++++++++++++++++');
   };
 
   return (
@@ -52,7 +49,6 @@ function AddItem() {
           accept="image/*"
           onChange={handleUpload}
         />
-        {/* <input type="text" id="image" name="image" placeholder="http://motorcycle.png"/> */}
       </div>
 
       <div className="input-wrap">

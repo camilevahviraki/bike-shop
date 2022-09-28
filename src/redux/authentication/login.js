@@ -9,7 +9,9 @@ const USER_LOGOUT = '/redux/USER_LOGOUT';
 export const isLogedInReducer = (state = { status: false }, action) => {
   switch (action.type) {
     case USER_LOGIN: {
-      return { status: true, userLogin: 'login' };
+      if (action.user.error) {
+        return { status: false, userLogin: 'fail' };
+      } return { status: true, userLogin: 'login' };
     }
     case USER_SIGNUP: {
       return { status: true, userLogin: 'Signup' };

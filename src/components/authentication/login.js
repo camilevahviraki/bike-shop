@@ -32,16 +32,9 @@ class Login extends Component {
   }
 
   render() {
-    console.log('Token =>', this.props.authToken);
     if (this.props.authToken.user) {
       localStorage.setItem('userData', JSON.stringify(this.props.authToken));
     }
-
-    // if(this.props.isLogedIn){
-    //   return (
-    //     <Navigate to="/" />
-    //   )
-    // }
     return (
       <div className="Login-form-container">
         <h2 className="Login-title">Login</h2>
@@ -70,7 +63,7 @@ class Login extends Component {
           </p>
         </div>
         <div className="dont-have-account">
-          <p className="Login-message">Don't have an account?</p>
+          <p className="Login-message">Don&apos;t have an account?</p>
           <Link to="../signup">Signup</Link>
         </div>
       </div>

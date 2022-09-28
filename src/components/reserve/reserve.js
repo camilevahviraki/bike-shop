@@ -29,10 +29,10 @@ function ReserveForm() {
           <>
             {
             sampleResponse.map((bike, key) => (
-              <div 
+              <div
                 className="reserve-bike-wrap"
                 onMouseOver={() => setShowReserve(key)}
-                onMouseLeave={()=> setShowReserve(null)}
+                onMouseLeave={() => setShowReserve(null)}
                 key={bike.id}
               >
                 <div className="div-div">
@@ -42,7 +42,7 @@ function ReserveForm() {
                     {' '}
                     {bike.model}
                   </h5>
-                  <p className='booking-fee-reserve'>
+                  <p className="booking-fee-reserve">
                     $
                     {bike.booking_fee}
                   </p>
@@ -53,15 +53,15 @@ function ReserveForm() {
                 </div>
                 <span className={bike.reserved ? 'reserved-span' : 'reserved-span hidden'}>Reserved</span>
                 {
-                  showReserve === key? (
+                  showReserve === key ? (
                     <button
-                    type="button"
-                    className="reserve-reserve-button"
-                    onClick={() => { setReservedBike(bike), setShowForm(!showForm); }}
-                  >
-                    Reserve
-                  </button>
-                  ):(<></>)
+                      type="button"
+                      className="reserve-reserve-button"
+                      onClick={() => { setReservedBike(bike); setShowForm(!showForm); }}
+                    >
+                      Reserve
+                    </button>
+                  ) : (<></>)
                 }
               </div>
 

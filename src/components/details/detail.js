@@ -15,10 +15,7 @@ class Details extends Component {
 
   componentDidMount() {
     const { token } = this.props.userData;
-    this.props.fetchDetails(parseInt(localStorage.getItem('detailsID')), token);
-    if (this.props.detailsData.reserved !== undefined) {
-      this.setState({ buttonStyle: this.props.detailsData.reserved });
-    }
+    this.props.fetchDetails(parseInt(localStorage.getItem('detailsID'), 10), token);
   }
 
   hideForm = () => {
@@ -80,7 +77,11 @@ class Details extends Component {
               </div>
 
             </div>
-            {this.state.showForm ? (<ReserveItem bike={detailsData} hideForm={this.hideForm} />) : (<></>)}
+            {
+            this.state.showForm
+              ? (<ReserveItem bike={detailsData} hideForm={this.hideForm} />)
+              : (<></>)
+            }
           </div>
         )
           : (<h2>...loading</h2>)
@@ -103,4 +104,3 @@ const mapState = (state) => ({
 });
 
 export default connect(mapState, mapDispatchToProps)(Details);
-[];

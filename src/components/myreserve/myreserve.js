@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { setDetailsLink } from '../../redux/details/details';
 import { getMyReservations, cancelReservation } from '../../redux/reservations/reservetions';
 import avatarBike from '../../icons/bike-icon.png';
 import './myreserve.css';
@@ -14,11 +12,6 @@ function ReservePage() {
   }, []);
 
   const myReservations = useSelector((state) => state.getReservationsReducer);
-  const [deleteVisible, setDeleteVisible] = useState(null);
-
-  const showDelete = (id) => {
-    setDeleteVisible(id);
-  };
 
   return (
     <div className="reservations">
@@ -26,11 +19,9 @@ function ReservePage() {
 
       <div
         className="reservation-container-main"
-        onMouseOver={() => showDelete(bike.reservation_id)}
-        onMouseLeave={() => showDelete(null)}
       >
         <div className="reservation-container top-line">
-          <p className='reservation-image'>
+          <p className="reservation-image">
             Image
           </p>
           <p className="reservation-brand">
@@ -63,8 +54,7 @@ function ReservePage() {
           ? myReservations.map((bike) => (
             <div
               className="reservation-container-main"
-              onMouseOver={() => showDelete(bike.reservation_id)}
-              onMouseLeave={() => showDelete(null)}
+              key={bike.reservation_id}
             >
               <div className="reservation-container">
                 <div className="reservation-image-wrap">

@@ -5,10 +5,6 @@ import avaterImg from '../../icons/bike-icon.png';
 import './reserveForm.css';
 
 class ReserveItem extends Component {
-  constructor(props) {
-    super(props);
-  }
-
     handleSubmit = (e) => {
       e.preventDefault();
       const startDate = e.target.start_date.value;
@@ -30,7 +26,7 @@ class ReserveItem extends Component {
     }
 
     render() {
-      const bookingFee = parseInt(this.props.bike.booking_fee);
+      const bookingFee = parseInt(this.props.bike.booking_fee, 10);
       const taxes = bookingFee / 20;
 
       return (
