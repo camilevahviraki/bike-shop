@@ -11,6 +11,7 @@ import Login from './components/authentication/login';
 import Details from './components/details/detail';
 import Signup from './components/authentication/signup';
 import UserAccount from './components/userAccount/userAccount';
+import SplashScreen from './components/splashScreen/splashScreen';
 
 function App() {
   let detailsLink = '';
@@ -26,8 +27,9 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path={detailsLink} element={<Details />} />
+        <Route path="/" element={<SplashScreen />} />
+        <Route path="main" element={<Main />} />
+        <Route path={`main/${detailsLink}`} element={<Details />} />
         <Route path="reserve" element={<Reserve />} />
         <Route path="MyReservation" element={<Reservation />} />
         <Route path="AddItem" element={<AddItem />} />
