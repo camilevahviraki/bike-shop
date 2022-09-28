@@ -1,6 +1,5 @@
 .Login-form-container {
-    margin-left: 17vw;
-    width: 83vw;
+    width: 100vw;
     background: linear-gradient(270deg, rgba(8, 48, 85, 0.822) 0.81%, rgba(2, 10, 17, 0.9) 84.03%);
     display: flex;
     flex-direction: column;
@@ -10,7 +9,7 @@
 
 .Login-form {
     margin-top: 20px;
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     position: relative;

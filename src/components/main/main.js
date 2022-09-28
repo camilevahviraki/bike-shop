@@ -1,62 +1,65 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchMotorcycles } from '../../redux/main/motorcycles';
 import { setDetailsLink } from '../../redux/details/details';
+import { setNavVisible } from '../../redux/navbar/navbar';
 import avaterImg from '../../icons/bike-icon.png';
 import './main.css';
 
 function MainPage() {
+  const ref = useRef(null);
   const token = useSelector((state) => state.authenticationReducer.token);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMotorcycles(token));
+    dispatch(setNavVisible(true));
   }, []);
 
   const motorCycles = useSelector((state) => state.motorcyclesReducer);
 
-  const checkUpLimit = (props) => {
+  const checkUpLimit = () => {
     if (motorCycles.length <= 3) {
       return motorCycles.length;
     }
     return 3;
   };
 
-  const [downlinit, setDownLimit] = useState(0);
   const [uplimit, setUpLimit] = useState(checkUpLimit);
   const [classBtnDown, setClassBtnDown] = useState('colorGray');
   const [classBtnUp, setClassBtnUp] = useState(motorCycles.length > 3 ? 'colorGreen' : 'colorGray');
 
   const changeDownlimit = () => {
-    if ((downlinit - 3) <= 0) {
-      setDownLimit(0);
-      setUpLimit(3);
-      setClassBtnDown('colorGray');
-      setClassBtnUp('colorGreen');
-    } else {
-      setDownLimit(downlinit - 3);
-      setUpLimit(uplimit - 3);
+    if((uplimit - 4) >= 0){
+      setUpLimit(uplimit - 4);
       setClassBtnDown('colorGreen');
       setClassBtnUp('colorGreen');
+    }else {
+      setUpLimit(0);
+      setClassBtnDown('colorGray');
+      setClassBtnUp('colorGreen');
     }
+    
+    ref.current?.scrollIntoView({behavior: 'smooth'});
   };
 
   const changeUplimit = () => {
-    if (!((downlinit + 3) > motorCycles.length)) {
-      setDownLimit(downlinit + 3);
+    if((uplimit + 3) > motorCycles.length) {
+      setUpLimit(motorCycles.length);
+      setClassBtnDown('colorGreen');
+      setClassBtnUp('colorGray');
+    }else{
       setUpLimit(uplimit + 3);
       setClassBtnDown('colorGreen');
       setClassBtnUp('colorGreen');
-    } else {
-      setClassBtnDown('colorGreen');
-      setClassBtnUp('colorGray');
     }
+    ref.current?.scrollIntoView({behavior: 'smooth'});
   };
 
   return (
     <section className="main-page-container main-container">
-      { motorCycles
-        ? motorCycles.slice(downlinit, uplimit).map((bike, key) => (
+      { motorCycles.length > 0
+        ? motorCycles.map((bike, key) => (
           <Link
             to={`${bike.brand}-${bike.model}`.split(' ').join('-')}
             onClick={() => {
@@ -67,6 +70,7 @@ function MainPage() {
           >
             <div
               className="motorcycle_wrap"
+              ref={ key === uplimit ? ref : null }
             >
               <div>
                 <div className="bike-image-wrap">

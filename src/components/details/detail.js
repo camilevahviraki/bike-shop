@@ -2,15 +2,27 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { detailsMotorcycle, reserveMotorcycle } from '../../redux/details/details';
 import avaterImg from '../../icons/bike-icon.png';
+import ReserveItem from '../reserve/reserveForm';
 import './details.css';
 
 class Details extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      showForm: false,
+    }
+  }
   componentDidMount() {
-    this.props.fetchDetails(parseInt(localStorage.getItem('detailsID')));
+    const token = this.props.userData.token;
+    this.props.fetchDetails(parseInt(localStorage.getItem('detailsID')), token);
     if (this.props.detailsData.reserved !== undefined) {
       this.setState({ buttonStyle: this.props.detailsData.reserved });
     }
   }
+
+  hideForm = () => {
+    this.setState({showForm: false})
+  };
 
   render() {
     const { detailsData } = this.props;
@@ -58,14 +70,16 @@ class Details extends Component {
                     className={reservation ? 'Reserve-details details-reserved' : 'Reserve-details'}
                     onClick={() => {
                       this.props.reserveMotor(detailsData.id);
+                      this.setState({showForm: !this.state.showForm});
                     }}
                   >
-                    {reservation ? 'Cancel Reservation' : ' Reserve > '}
+                    Reserve
                   </button>
                 </div>
               </div>
 
             </div>
+            {this.state.showForm ? (<ReserveItem bike={detailsData} hideForm={this.hideForm} />) : (<></>)}
           </div>
         )
           : (<h2>...loading</h2>)
@@ -77,12 +91,15 @@ class Details extends Component {
 
 const mapDispatchToProps = (dispatch) => (
   {
-    fetchDetails: (id) => dispatch(detailsMotorcycle(id)),
+    fetchDetails: (id, token) => dispatch(detailsMotorcycle(id, token)),
     reserveMotor: (id) => dispatch(reserveMotorcycle(id)),
   }
 );
 
-const mapState = (state) => ({ detailsData: state.detailsMotorcycleReducer });
+const mapState = (state) => ({ 
+  detailsData: state.detailsMotorcycleReducer,
+  userData: state.authenticationReducer,
+ });
 
 export default connect(mapState, mapDispatchToProps)(Details);
 [];

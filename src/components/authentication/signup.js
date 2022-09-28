@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { userSignup } from '../../redux/authentication/login';
 
 class Signup extends Component {
@@ -15,7 +17,7 @@ class Signup extends Component {
 
   submit = () => {
     if (this.state.username.length === 0 && this.state.password.length === 0) {
-      this.setState({ message: 'Please, Fill all field to login' });
+      this.setState({ message: 'Please, Fill all field to Signup' });
     } else if (this.state.username.length === 0) {
       this.setState({ message: 'Username can\'t be blanck' });
     } else if (this.state.password.length === 0) {
@@ -30,14 +32,11 @@ class Signup extends Component {
     }
   }
 
-  //   componentDidUpdate (prevProps){
-  //      if(this.props.isLogedIn === true){
-
-  //      }
-  //   }
-
   render() {
     console.log('Signup Token =>', this.props.authToken);
+    if (this.props.isSignedUp.status) {
+      return (<Navigate to="../main" />);
+    }
     return (
       <div className="Login-form-container">
         <h2 className="Login-title">Signup</h2>
@@ -61,7 +60,7 @@ class Signup extends Component {
         </div>
         <div className="dont-have-account">
           <p>Allready have an account?</p>
-          <Link to={this.props.isLogedIn ? '../login' : '../'}>Sign In</Link>
+          <Link to={this.props.isLogedIn ? '../login' : '../main'}>Sign In</Link>
         </div>
       </div>
     );
@@ -74,6 +73,7 @@ const mapDispatch = (dispatch) => ({
 
 const mapState = (state) => ({
   authToken: state.authenticationReducer,
+  isSignedUp: state.isLogedInReducer,
 });
 
 export default connect(mapState, mapDispatch)(Signup);

@@ -24,7 +24,7 @@ function RemoveItem() {
         myMotorcycles ? (
           <>
             {
-            myMotorcycles.map((bike, key) => (
+            myMotorcycles.map((bike) => (
               <div className="reserve-bike-wrap">
                 <div className="div-div">
                   <img src={bike.image ? bike.image : avatarBike} alt="" className="image-radio-bike" />

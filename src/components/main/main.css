@@ -3,6 +3,16 @@
     align-items: center;
     height: 100vh;
     margin-left: 26vw;
+    overflow-x: scroll;
+}
+
+.main-page-container a {
+    text-decoration: none;
+}
+
+
+.main-page-container h3 {
+    color: black;
 }
 
 .bike-image-wrap {

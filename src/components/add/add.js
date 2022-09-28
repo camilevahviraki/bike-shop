@@ -34,10 +34,7 @@ function AddItem() {
     console.log("+++++++++++++++++++++++++++++");
     console.log('added?', motorcycleParams);
     console.log("+++++++++++++++++++++++++++++");
-
   };
-
- 
 
   return (
     <form className="form-add-new-bike" onSubmit={handleSubmit}>

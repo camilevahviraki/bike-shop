@@ -16,7 +16,7 @@ function Navbar() {
         </div>
 
         <div className="navMenu">
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}>
+          <NavLink to="/main" className={({ isActive }) => (isActive ? 'rocket active' : 'rocket link')}>
             <span>MOTORCYCLES</span>
           </NavLink>
 
