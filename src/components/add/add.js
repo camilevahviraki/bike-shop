@@ -31,9 +31,9 @@ function AddItem() {
 
     const { token } = userDetails;
     dispatch(addMotorcycle(motorcycleParams, token));
-    console.log("+++++++++++++++++++++++++++++");
+    console.log('+++++++++++++++++++++++++++++');
     console.log('added?', motorcycleParams);
-    console.log("+++++++++++++++++++++++++++++");
+    console.log('+++++++++++++++++++++++++++++');
   };
 
   return (

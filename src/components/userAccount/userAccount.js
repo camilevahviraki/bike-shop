@@ -44,13 +44,14 @@ class UserAccount extends Component {
           <img src={userAvatar} alt="" className="user-avatar" />
         </div>
         <h2 className="UserName">{this.props.userLoged.user.username}</h2>
-        <div className='logout-wrap'>
-        <Link to="../"
-          onClick={() => this.logout()}
-          className="logOut"
-        >
-          Logout
-        </Link>
+        <div className="logout-wrap">
+          <Link
+            to="../"
+            onClick={() => this.logout()}
+            className="logOut"
+          >
+            Logout
+          </Link>
         </div>
       </div>
     );

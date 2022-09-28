@@ -36,17 +36,17 @@ export const getMyReservations = (userID, token) => (dispatch) => {
 
 export const cancelReservation = (id, token) => (dispatch) => {
   axios.delete(`${linkURL}/api/v1/motorcycle/${id}/reservation/${id}`,
-  {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  })
-  .then((response) => dispatch(
     {
-      type: CANCEL_RESERVATION,
-      id,
-    },
-  ));
-}
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => dispatch(
+      {
+        type: CANCEL_RESERVATION,
+        id,
+      },
+    ));
+};
 
 export default getReservationsReducer;

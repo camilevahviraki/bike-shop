@@ -30,30 +30,30 @@ function MainPage() {
   const [classBtnUp, setClassBtnUp] = useState(motorCycles.length > 3 ? 'colorGreen' : 'colorGray');
 
   const changeDownlimit = () => {
-    if((uplimit - 4) >= 0){
+    if ((uplimit - 4) >= 0) {
       setUpLimit(uplimit - 4);
       setClassBtnDown('colorGreen');
       setClassBtnUp('colorGreen');
-    }else {
+    } else {
       setUpLimit(0);
       setClassBtnDown('colorGray');
       setClassBtnUp('colorGreen');
     }
-    
-    ref.current?.scrollIntoView({behavior: 'smooth'});
+
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const changeUplimit = () => {
-    if((uplimit + 3) > motorCycles.length) {
+    if ((uplimit + 3) > motorCycles.length) {
       setUpLimit(motorCycles.length);
       setClassBtnDown('colorGreen');
       setClassBtnUp('colorGray');
-    }else{
+    } else {
       setUpLimit(uplimit + 3);
       setClassBtnDown('colorGreen');
       setClassBtnUp('colorGreen');
     }
-    ref.current?.scrollIntoView({behavior: 'smooth'});
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -70,7 +70,7 @@ function MainPage() {
           >
             <div
               className="motorcycle_wrap"
-              ref={ key === uplimit ? ref : null }
+              ref={key === uplimit ? ref : null}
             >
               <div>
                 <div className="bike-image-wrap">

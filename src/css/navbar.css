@@ -37,7 +37,7 @@ body {
   position: absolute;
   top: 25vh;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 .navMenu a {

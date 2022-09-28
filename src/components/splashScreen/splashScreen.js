@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { setNavVisible } from "../../redux/navbar/navbar";
-import { useDispatch, useSelector } from "react-redux";
-import "./splashScreen.css";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setNavVisible } from '../../redux/navbar/navbar';
+import './splashScreen.css';
 
 function SplashScreen() {
   const dispatch = useDispatch();
@@ -10,10 +10,10 @@ function SplashScreen() {
     dispatch(setNavVisible(false));
   }, []);
 
-  let message = "";
-  const loggedOut = useSelector(state => state.isLogedInReducer);
-  if(loggedOut.userLogin === 'logout') {
-    message = "logged Out!";
+  let message = '';
+  const loggedOut = useSelector((state) => state.isLogedInReducer);
+  if (loggedOut.userLogin === 'logout') {
+    message = 'logged Out!';
     window.location.reload(false);
   }
   return (

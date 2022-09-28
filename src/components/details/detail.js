@@ -6,14 +6,15 @@ import ReserveItem from '../reserve/reserveForm';
 import './details.css';
 
 class Details extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       showForm: false,
-    }
+    };
   }
+
   componentDidMount() {
-    const token = this.props.userData.token;
+    const { token } = this.props.userData;
     this.props.fetchDetails(parseInt(localStorage.getItem('detailsID')), token);
     if (this.props.detailsData.reserved !== undefined) {
       this.setState({ buttonStyle: this.props.detailsData.reserved });
@@ -21,7 +22,7 @@ class Details extends Component {
   }
 
   hideForm = () => {
-    this.setState({showForm: false})
+    this.setState({ showForm: false });
   };
 
   render() {
@@ -70,7 +71,7 @@ class Details extends Component {
                     className={reservation ? 'Reserve-details details-reserved' : 'Reserve-details'}
                     onClick={() => {
                       this.props.reserveMotor(detailsData.id);
-                      this.setState({showForm: !this.state.showForm});
+                      this.setState({ showForm: !this.state.showForm });
                     }}
                   >
                     Reserve
@@ -96,10 +97,10 @@ const mapDispatchToProps = (dispatch) => (
   }
 );
 
-const mapState = (state) => ({ 
+const mapState = (state) => ({
   detailsData: state.detailsMotorcycleReducer,
   userData: state.authenticationReducer,
- });
+});
 
 export default connect(mapState, mapDispatchToProps)(Details);
 [];

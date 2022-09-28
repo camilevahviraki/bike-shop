@@ -1,80 +1,80 @@
 .cancel-reservaion {
-    color: rgb(179, 104, 6);
-    background-color: rgba(128, 128, 128, 0.356);
-    padding: 8px 12px;
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 20px;
-    border: none;
-    right: 10px;
+  color: rgb(179, 104, 6);
+  background-color: rgba(128, 128, 128, 0.356);
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  right: 10px;
 }
 
-.cancel-reservaion:hover{
-    color: rgb(253, 253, 253);
-    background-color: rgba(255, 153, 0, 0.877);
+.cancel-reservaion:hover {
+  color: rgb(253, 253, 253);
+  background-color: rgba(255, 153, 0, 0.877);
 }
 
 .reservation-container p {
-   margin: auto;
-   font-size: 16px;
-   height: 16px;
-   color: rgba(255, 255, 255, 0.74);
+  margin: auto;
+  font-size: 16px;
+  height: 16px;
+  color: rgba(255, 255, 255, 0.74);
 }
 
 .top-line {
-    border-top: 1px solid rgba(145, 145, 145, 0.726);
+  border-top: 1px solid rgba(145, 145, 145, 0.726);
 }
 
 .top-line p {
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    height: auto;
-    padding: 10px 0;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  height: auto;
+  padding: 10px 0;
 }
 
 .reservations {
-    width: 83vw;
-    margin-left: 17vw;
-    height: 100vh;
-    margin-top: 0;
-    background-color: rgba(1, 18, 24, 0.911);
-    padding-bottom: 100px;
+  width: 83vw;
+  margin-left: 17vw;
+  height: 100vh;
+  margin-top: 0;
+  background-color: rgba(1, 18, 24, 0.911);
+  padding-bottom: 100px;
 }
 
 .reservations h1 {
-    width: 87%;
-    color: #fff;
-    text-align: center;
-    padding: 12px;
-    border-bottom: 1px solid #fff;
-    margin-left: 5%;
+  width: 87%;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #fff;
+  margin-left: 5%;
 }
 
 .reservation-button-wrap {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .reservation-container-main {
-    text-align: center;
+  text-align: center;
 }
 
 .reservation-image {
-    max-width: 80%;
-    height: auto;
-    max-width: auto;
-    max-height: 100%;
-    margin-left: 10%;
+  max-width: 80%;
+  height: auto;
+  max-width: auto;
+  max-height: 100%;
+  margin-left: 10%;
 }
 
 .reservation-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-    border: 1px solid rgba(145, 145, 145, 0.726);
-    width: 90%;
-    gap: 4px;
-    position: relative;
-    margin-left: 5%;
-    border-top: none;
-    background-color: rgba(9, 20, 29, 0.815);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  border: 1px solid rgba(145, 145, 145, 0.726);
+  width: 90%;
+  gap: 4px;
+  position: relative;
+  margin-left: 5%;
+  border-top: none;
+  background-color: rgba(9, 20, 29, 0.815);
 }

@@ -1,75 +1,75 @@
 .form-add-new-bike {
-    margin: 0;
-    margin-left: 17vw;
-    width: 83vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(270deg, rgba(8, 48, 85, 0.822) 0.81%, rgba(2, 10, 17, 0.9) 84.03%);
-    height: 100vh;
+  margin: 0;
+  margin-left: 17vw;
+  width: 83vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(270deg, rgba(8, 48, 85, 0.822) 0.81%, rgba(2, 10, 17, 0.9) 84.03%);
+  height: 100vh;
 }
 
 .input-wrap {
-    width: 70%;
-    display: flex;
-    margin: 10px;
+  width: 70%;
+  display: flex;
+  margin: 10px;
 }
 
 .top-field {
-    margin-top: 110px !important;
+  margin-top: 110px !important;
 }
 
 .input-wrap input {
-    width: 80%;
-    height: 40px;
-    padding-left: 6px;
-    border-radius: 20px;
+  width: 80%;
+  height: 40px;
+  padding-left: 6px;
+  border-radius: 20px;
 }
 
 .input-wrap textarea {
-    width: 80%;
-    height: 80px;
-    padding-left: 6px;
-    border-radius: 20px;
-    padding-top: 14px;
+  width: 80%;
+  height: 80px;
+  padding-left: 6px;
+  border-radius: 20px;
+  padding-top: 14px;
 }
 
 .btn-add-new {
-    padding: 10px;
-    border-radius: 17px;
-    border: none;
-    color: #fff;
-    font-weight: 800;
-    font-size: 15px;
-    background-color: rgb(42, 112, 2);
+  padding: 10px;
+  border-radius: 17px;
+  border: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  background-color: rgb(42, 112, 2);
 }
 
 .input-wrap label {
-    padding: 10px;
-    color: rgb(252, 252, 252);
-    font-weight: 800;
-    min-width: 100px;
-    border-radius: 16px;
-    background-color: rgb(122, 122, 122);
-    margin-right: 20px;
+  padding: 10px;
+  color: rgb(252, 252, 252);
+  font-weight: 800;
+  min-width: 100px;
+  border-radius: 16px;
+  background-color: rgb(122, 122, 122);
+  margin-right: 20px;
 }
 
 .image-avatar-wrap {
-    top: 10px;
-    left: 60%;
-    width: 130px;
-    height: 130px;
-    background-color: #fff;
-    border-radius: 50%; 
-    overflow: hidden;
-    position: absolute;
+  top: 10px;
+  left: 60%;
+  width: 130px;
+  height: 130px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
 }
 
 .image-avatar {
-    max-width: 84%;
-    max-height: 84%;
-    height: auto;
-    z-index: 10;
-    margin-left: 8%;
-    margin-top: 8%;
+  max-width: 84%;
+  max-height: 84%;
+  height: auto;
+  z-index: 10;
+  margin-left: 8%;
+  margin-top: 8%;
 }

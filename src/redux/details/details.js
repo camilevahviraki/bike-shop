@@ -38,11 +38,11 @@ export const setDetailsLink = (link) => (dispatch) => {
 
 export const detailsMotorcycle = (id, varToken) => (dispatch) => {
   axios.get(`${linkURL}/api/v1/motorcycle/${id}`,
-  {
-    headers: {
-      Authorization: `Bearer ${varToken}`,
-    },
-  })
+    {
+      headers: {
+        Authorization: `Bearer ${varToken}`,
+      },
+    })
     .then((response) => dispatch(
       {
         type: DETAILS_MOTORCYCLE,
@@ -52,13 +52,12 @@ export const detailsMotorcycle = (id, varToken) => (dispatch) => {
 };
 
 export const reserveMotorcycle = (id) => (dispatch) => {
-
-dispatch(
-  {
-    type: RESERVE_BIKE_DETAILS,
-    id,
-  }
-)
+  dispatch(
+    {
+      type: RESERVE_BIKE_DETAILS,
+      id,
+    },
+  );
 };
 
 export default detailsMotorcycleReducer;
