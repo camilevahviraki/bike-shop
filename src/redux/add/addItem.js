@@ -18,6 +18,7 @@ export const addMotorcycle = (newMotorcycle, token) => (dispatch) => {
     {
       headers: {
         Authorization: `Bearer ${token}`,
+        "Content-Type": "multipart/form-data",
       },
     })
     .then((response) => dispatch(
