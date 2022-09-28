@@ -4,7 +4,7 @@ import logger from './logger/thunk';
 import motorcyclesReducer from './main/motorcycles';
 import addMotorCycleReducer from './add/addItem';
 import detailsMotorcycleReducer, { currentLinkReducer } from './details/details';
-import authenticationReducer from './authentication/login';
+import authenticationReducer, {isLogedInReducer} from './authentication/login';
 import IsNavbarVisible from './navbar/navbar';
 import getReservationsReducer from './reservations/reservetions';
 
@@ -16,6 +16,7 @@ const rootReducer = combineReducers({
   IsNavbarVisible,
   currentLinkReducer,
   getReservationsReducer,
+  isLogedInReducer,
 });
 
 const store = createStore(
