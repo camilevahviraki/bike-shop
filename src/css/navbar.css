@@ -4,6 +4,14 @@ body {
   margin: 0;
 }
 
+.logout-wrap {
+  position: relative;
+}
+
+.logout-wrap a {
+  position: relative !important;
+}
+
 .navbar {
   justify-content: space-between;
   display: flex;
