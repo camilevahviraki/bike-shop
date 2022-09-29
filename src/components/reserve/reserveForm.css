@@ -100,7 +100,7 @@
 }
 
 .form-input-wrap input {
-  width: 80%;
+  width: 75%;
   height: 30px;
   border-radius: 18px;
   color: rgb(221, 221, 221);
@@ -108,6 +108,7 @@
   position: absolute;
   right: 0;
   padding-left: 12px;
+  padding-right: 12px;
 }
 
 .image-popup-wrap {

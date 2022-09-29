@@ -45,7 +45,7 @@ function MainPage() {
 
   const changeUplimit = () => {
     if ((uplimit + 3) > motorCycles.length) {
-      setUpLimit(motorCycles.length);
+      setUpLimit(motorCycles.length - 1);
       setClassBtnDown('colorGreen');
       setClassBtnUp('colorGray');
     } else {

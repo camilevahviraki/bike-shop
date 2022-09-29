@@ -21,6 +21,13 @@
   align-items: center;
 }
 
+.reserve-bike-img-wrap {
+  width: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .div-div p {
   color: gray;
   margin-left: 10px;

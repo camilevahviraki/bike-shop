@@ -36,7 +36,9 @@ function ReserveForm() {
                 key={bike.id}
               >
                 <div className="div-div">
-                  <img src={bike.image_url ? bike.image_url : avaterImg} alt="" className="image-radio-bike" />
+                  <div className="reserve-bike-img-wrap">
+                    <img src={bike.image_url ? bike.image_url : avaterImg} alt="" className="image-radio-bike" />
+                  </div>
                   <h5 className="Title-reserve">
                     {bike.brand}
                     {' '}

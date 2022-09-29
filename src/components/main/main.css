@@ -5,6 +5,7 @@
   height: 100vh;
   margin-left: 26vw;
   overflow-x: scroll;
+  padding-right: 100px;
 }
 
 .main-page-container a {
@@ -88,6 +89,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     padding-top: 50px;
+    padding-right: 0;
   }
 
   .motorcycle_wrap {

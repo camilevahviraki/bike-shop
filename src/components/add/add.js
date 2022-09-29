@@ -7,12 +7,11 @@ import './add.css';
 function AddItem() {
   const userDetails = useSelector((state) => state.authenticationReducer);
   const [avatar, setAvatar] = useState(avatarImg);
-  const [image, setImage] = useState(null);
+  const [message, setMessage] = useState(null);
   const dispatch = useDispatch();
 
   const handleUpload = (e) => {
     setAvatar(URL.createObjectURL(e.target.files[0]));
-    setImage(e.target.files[0]);
   };
 
   const handleSubmit = (e) => {
@@ -31,6 +30,7 @@ function AddItem() {
 
     const { token } = userDetails;
     dispatch(addMotorcycle(motorcycleParams, token));
+    setMessage('Added successfully!');
   };
 
   return (
@@ -82,6 +82,7 @@ function AddItem() {
         />
       </div>
       <button type="submit" className="btn-add-new">Add new bike</button>
+      <p style={{ color: '#fff', margin: '5px' }}>{message}</p>
     </form>
   );
 }
