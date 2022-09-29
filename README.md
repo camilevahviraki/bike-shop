@@ -30,7 +30,11 @@ To get a local copy up and running:
 
 **``you@your-Pc-name:~$ cd <folder>``**
 
-3. Run
+3. Install NPM
+
+**``npm install``**
+
+4. Run
  
 **``npm start``**
 
