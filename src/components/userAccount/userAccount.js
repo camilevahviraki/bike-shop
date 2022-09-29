@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import userAvatar from '../../icons/user-avatar.jpg';
 import { setNavVisible } from '../../redux/navbar/navbar';
 import {userLogout} from '../../redux/authentication/login';
-import './userAccount.css';
 
 class UserAccount extends Component {
   constructor(props) {
