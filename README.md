@@ -4,7 +4,7 @@ A Bike Shop App developed using React for Front-End and Ruby on Rails for Back-E
 
 ![image](https://user-images.githubusercontent.com/91697183/192991047-32537abd-f1f1-4e7f-97fa-a9dbc1842304.png)
 
-This our Final React-Rails Capstone project in the Microverse curriculum.
+This is our Final React-Rails Capstone project in the Microverse curriculum.
 
 ## Built With
 
@@ -59,6 +59,8 @@ To get a local copy up and running:
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/ger619/bike-shop-frontend/issues).
 
 ## Show your support
 
