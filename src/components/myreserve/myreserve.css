@@ -63,9 +63,9 @@
 .reservation-image {
   max-width: 80%;
   height: auto;
-  max-width: auto;
   max-height: 100%;
   margin-left: 10%;
+  display: flex;
 }
 
 .reservation-container {
@@ -78,10 +78,6 @@
   margin-left: 5%;
   border-top: none;
   background-color: rgba(9, 20, 29, 0.815);
-}
-
-.reservation-image {
-  display: flex;
 }
 
 @media screen and (max-width: 768px) {
@@ -114,11 +110,9 @@
     margin-left: 2%;
     padding: 12px 4%;
   }
-
 }
 
 @media screen and (max-width: 620px) {
-
   .reservation-image {
     display: none;
   }
@@ -140,20 +134,16 @@
     height: auto;
   }
 
-.reservation-image-wrap {
-  display: none;
-}
+  .cancel-reservaion {
+    padding: 4px 6px;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 20px;
+    border: none;
+    margin: 15px 0;
+  }
 
-.cancel-reservaion {
-  padding: 4px 6px;
-  font-weight: 700;
-  font-size: 12px;
-  border-radius: 20px;
-  border: none;
-  margin: 15px 0;
-}
-
-.reservation-model {
-  display: none;
-}
+  .reservation-model {
+    display: none;
+  }
 }
