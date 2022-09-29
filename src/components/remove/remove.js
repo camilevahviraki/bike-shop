@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { removeMotorcycle, fetchMotorcycles } from '../../redux/main/motorcycles';
 import avatarBike from '../../icons/bike-icon.png';
 
-function RemoveItem() {
+const RemoveItem = () => {
   const motorcycles = useSelector((state) => state.motorcyclesReducer);
   const userToken = useSelector((state) => state.authenticationReducer);
   const myMotorcycles = motorcycles.filter((bike) => bike.user_id === userToken.user.id);
@@ -70,6 +70,6 @@ function RemoveItem() {
       }
     </div>
   );
-}
+};
 
 export default RemoveItem;

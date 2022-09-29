@@ -4,7 +4,7 @@ import { addMotorcycle } from '../../redux/add/addItem';
 import avatarImg from '../../icons/bike-icon.png';
 import './add.css';
 
-function AddItem() {
+const AddItem = () => {
   const userDetails = useSelector((state) => state.authenticationReducer);
   const [avatar, setAvatar] = useState(avatarImg);
   const [message, setMessage] = useState(null);
@@ -85,6 +85,6 @@ function AddItem() {
       <p style={{ color: '#fff', margin: '5px' }}>{message}</p>
     </form>
   );
-}
+};
 
 export default AddItem;

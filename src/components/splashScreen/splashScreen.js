@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setNavVisible } from '../../redux/navbar/navbar';
 import './splashScreen.css';
 
-function SplashScreen() {
+const SplashScreen = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setNavVisible(false));
@@ -34,6 +34,6 @@ function SplashScreen() {
       <p>{message}</p>
     </div>
   );
-}
+};
 
 export default SplashScreen;

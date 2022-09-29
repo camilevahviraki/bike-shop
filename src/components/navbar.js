@@ -5,7 +5,7 @@ import useAvatar from '../icons/avatar_account.png';
 import { setNavVisible } from '../redux/navbar/navbar';
 import '../css/navbar.css';
 
-function Navbar() {
+const Navbar = () => {
   const navVisible = useSelector((state) => state.IsNavbarVisible.status);
   const dispatch = useDispatch();
   const [mobileNav, setMobileNav] = useState(false);
@@ -111,6 +111,6 @@ function Navbar() {
       </div>
     </header>
   );
-}
+};
 
 export default Navbar;

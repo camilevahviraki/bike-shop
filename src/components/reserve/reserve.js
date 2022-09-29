@@ -5,7 +5,7 @@ import ReserveItem from './reserveForm';
 import avaterImg from '../../icons/bike-icon.png';
 import './reserve.css';
 
-function ReserveForm() {
+const ReserveForm = () => {
   const token = useSelector((state) => state.authenticationReducer.token);
   const dispatch = useDispatch();
 
@@ -76,6 +76,6 @@ function ReserveForm() {
       {showForm ? (<ReserveItem bike={reservedBike} hideForm={hideForm} />) : (<></>)}
     </div>
   );
-}
+};
 
 export default ReserveForm;

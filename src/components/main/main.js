@@ -7,7 +7,7 @@ import { setNavVisible } from '../../redux/navbar/navbar';
 import avaterImg from '../../icons/bike-icon.png';
 import './main.css';
 
-function MainPage() {
+const MainPage = () => {
   const ref = useRef(null);
   const token = useSelector((state) => state.authenticationReducer.token);
   const dispatch = useDispatch();
@@ -105,6 +105,5 @@ function MainPage() {
       </div>
     </section>
   );
-}
-
+};
 export default MainPage;

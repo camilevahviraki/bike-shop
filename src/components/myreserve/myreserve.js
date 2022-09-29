@@ -4,7 +4,7 @@ import { getMyReservations, cancelReservation } from '../../redux/reservations/r
 import avatarBike from '../../icons/bike-icon.png';
 import './myreserve.css';
 
-function ReservePage() {
+const ReservePage = () => {
   const userData = useSelector((state) => state.authenticationReducer);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -95,6 +95,6 @@ function ReservePage() {
 
     </div>
   );
-}
+};
 
 export default ReservePage;

@@ -1,10 +1,8 @@
 import React from 'react';
 import ReserveForm from '../components/reserve/reserve';
 
-function Reserve() {
-  return (
-    <ReserveForm />
-  );
-}
+const Reserve = () => (
+  <ReserveForm />
+);
 
 export default Reserve;
