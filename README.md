@@ -26,9 +26,13 @@ To get a local copy up and running:
 
 **``git clone https://github.com/ger619/bike-shop-frontend``**
 
-1. Navigate to the location of the folder in your machine:
+2. Navigate to the location of the folder in your machine:
 
 **``you@your-Pc-name:~$ cd <folder>``**
+
+3. Run
+ 
+**``npm start``**
 
 ## Authors
 
