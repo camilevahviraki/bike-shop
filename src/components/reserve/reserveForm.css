@@ -1,0 +1,193 @@
+.reserveForm-PopUp {
+  position: fixed;
+  width: 65vw;
+  height: 80vh;
+  background: linear-gradient(225deg, rgb(0, 0, 0) 0.81%, rgba(53, 53, 53, 0.9) 84.03%);
+  top: 10vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(1, 21, 31, 0.781);
+  right: 10vw;
+  z-index: 10;
+}
+
+.popup-txt {
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  width: 35%;
+  font-weight: 500;
+  color: rgb(180, 180, 180);
+  border-bottom: 1px solid rgba(180, 180, 180, 0.295);
+  margin-right: 10%;
+}
+
+.popup-txt span {
+  position: absolute;
+  right: 0;
+  font-weight: 700;
+  color: rgb(235, 235, 235);
+}
+
+.reserve-popup-details {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.closePopUp {
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  width: 18px;
+  height: 12px;
+}
+
+.closePopUp-child {
+  position: relative;
+  width: 100%;
+}
+
+.closePopUp-child div {
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #fff;
+  position: absolute;
+}
+
+.child1 {
+  transform: rotate(45deg);
+}
+
+.child2 {
+  transform: rotate(135deg);
+}
+
+.reserve-bike-form {
+  width: 80%;
+}
+
+.form-input-wrap {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: relative;
+  height: 45px;
+}
+
+.form-input-wrap button {
+  position: absolute;
+  right: 0;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: rgb(29, 94, 3);
+  font-weight: 800;
+  border: none;
+  font-size: 16px;
+  border-radius: 18px;
+}
+
+.form-input-wrap button:hover {
+  color: #fff;
+  background-color: rgb(122, 81, 3);
+}
+
+.form-input-wrap input {
+  width: 75%;
+  height: 30px;
+  border-radius: 18px;
+  color: rgb(221, 221, 221);
+  background-color: rgba(2, 55, 90, 0.137);
+  position: absolute;
+  right: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.image-popup-wrap {
+  position: absolute;
+  left: 10%;
+  width: 35%;
+  height: 210px;
+  display: block;
+}
+
+.image-popup {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .reserveForm-PopUp {
+    position: fixed;
+    width: 90vw;
+    min-height: 90vh;
+    height: auto;
+    top: 5vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(1, 21, 31, 0.781);
+    right: 5vw;
+    z-index: 10;
+  }
+
+  .image-popup-wrap {
+    display: none;
+  }
+
+  .popup-txt {
+    padding: 10px;
+    margin: 0;
+    position: relative;
+    width: 80%;
+    font-weight: 500;
+    color: rgb(180, 180, 180);
+    border-bottom: 1px solid rgba(180, 180, 180, 0.295);
+    margin-right: 7%;
+  }
+
+  .form-input-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    position: relative;
+    height: 45px;
+  }
+
+  .form-input-wrap input {
+    width: 100%;
+    height: 30px;
+    border-radius: 18px;
+    color: rgb(221, 221, 221);
+    background-color: rgba(2, 55, 90, 0.137);
+    position: relative;
+    right: 0;
+    padding: 12px;
+  }
+
+  .form-input-wrap button {
+    position: relative;
+    right: 0;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: rgb(29, 94, 3);
+    font-weight: 800;
+    border: none;
+    font-size: 16px;
+    border-radius: 18px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

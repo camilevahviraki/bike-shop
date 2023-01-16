@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Bike-Shop-Frontend-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Bike Shop App developed using React for Front-End and Ruby on Rails for Back-End.
 
-## Available Scripts
+![image](https://user-images.githubusercontent.com/91697183/192991047-32537abd-f1f1-4e7f-97fa-a9dbc1842304.png)
 
-In the project directory, you can run:
+This is our Final React-Rails Capstone project in the Microverse curriculum.
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- REACT
+- CSS
+- API
+- JSX
+- REACT-ROUTER-DOM
+ 
+ ## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Frontend Hosted Link](https://bike-shop-cmlx.netlify.app/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running:
 
-### `npm run build`
+1. Clone this repository or download the Zip folder:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**``git clone https://github.com/ger619/bike-shop-frontend``**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the location of the folder in your machine:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**``you@your-Pc-name:~$ cd <folder>``**
 
-### `npm run eject`
+3. Install NPM
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**``npm install``**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Run
+ 
+**``npm start``**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+👤 **Camile Vahviraki**
 
-## Learn More
+- Github: [@camilevahviraki](https://github.com/camilevahviraki)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- LinkedIn: [Camile Vahviraki](https://www.linkedin.com/in/camile-vahviraki)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Twitter: [Camile Vahviraki](https://twitter.com/CamileVahviraki)
 
-### Code Splitting
+👤 **Abol Ger**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Github: [@ger619](https://github.com/ger619)
 
-### Analyzing the Bundle Size
+- LinkedIn: [David Ger](https://linkedin.com/in/david-ger-426b4576)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Twitter: [David Ger](https://twitter.com/ger_abol)
 
-### Making a Progressive Web App
+👤 **Hammed Adisa**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Github: [@AbuRayhaan](https://github.com/AbuRayhaan)
 
-### Advanced Configuration
+- LinkedIn: [Adisa Hammed](https://www.linkedin.com/in/hammed-adisa/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Twitter: [@ayinla2011](https://twitter.com/Ayinla2011)
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions, issues, and feature requests are welcome!
 
-### `npm run build` fails to minify
+Feel free to check the [issues page](https://github.com/ger619/bike-shop-frontend/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Show your support
+
+Give a ⭐ if you like this project and how we manage to build it!
+
+## 📝 License
+
+This project is [MIT](https://github.com/ger619/bike-shop-frontend/blob/full-app/LICENSE)

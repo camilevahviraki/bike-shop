@@ -1,10 +1,8 @@
 import React from 'react';
 import DetailPage from '../components/details/detail';
 
-function Detail() {
-  return (
-    <DetailPage />
-  );
-}
+const Details = () => (
+  <DetailPage />
+);
 
-export default Detail;
+export default Details;

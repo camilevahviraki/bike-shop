@@ -16,8 +16,18 @@
   "plugins": ["react"],
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "no-unused-vars": "off",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off",
+    "react/no-access-state-in-setstate": "off",
+    "no-param-reassign": "off",
     "import/no-unresolved": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
     "no-shadow": "off"
   },
   "ignorePatterns": [

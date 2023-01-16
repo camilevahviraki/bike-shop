@@ -1,0 +1,114 @@
+.main-page-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  margin-left: 26vw;
+  overflow-x: scroll;
+  padding-right: 100px;
+}
+
+.main-page-container a {
+  text-decoration: none;
+}
+
+.main-page-container h3 {
+  color: black;
+}
+
+.bike-image-wrap {
+  width: 17vw;
+  height: 17vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bike-image {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+.motorcycle_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  width: 17vw;
+  height: 45vh;
+}
+
+.prev-next-btn {
+  width: 85px;
+  height: 45px;
+  border: none;
+  color: #fff;
+  font-weight: 900;
+}
+
+.previous-page {
+  border-bottom-right-radius: 22.5px;
+  border-top-right-radius: 22.5px;
+  position: absolute;
+  left: 17vw;
+}
+
+.next-page {
+  border-bottom-left-radius: 22.5px;
+  border-top-left-radius: 22.5px;
+  position: absolute;
+  right: 0;
+}
+
+.colorGray {
+  background-color: rgb(214, 213, 213);
+}
+
+.colorGreen {
+  background-color: rgb(84, 121, 0);
+}
+
+.bike-description {
+  color: rgba(128, 128, 128, 0.651);
+  margin-top: 0;
+  text-align: center;
+}
+
+.next-previous-wrap {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .main-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 50px;
+    padding-right: 0;
+  }
+
+  .motorcycle_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+    width: 80vw;
+    height: auto;
+  }
+
+  .bike-image-wrap {
+    width: 40vw;
+    height: auto;
+    border-radius: 20%;
+    overflow: hidden;
+  }
+
+  .next-previous-wrap {
+    display: none;
+  }
+}

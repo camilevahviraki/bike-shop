@@ -1,0 +1,424 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Components test Add 1`] = `
+<form
+  className="form-add-new-bike"
+  onSubmit={[Function]}
+>
+  <article
+    className="image-avatar-wrap"
+  >
+    <img
+      alt=""
+      className="image-avatar"
+      src="bike-icon.png"
+    />
+  </article>
+  <div
+    className="input-wrap top-field"
+  >
+    <label
+      htmlFor="image"
+    >
+      Image
+    </label>
+    <input
+      accept="image/*"
+      id="image"
+      name="image"
+      onChange={[Function]}
+      placeholder="http://motorcycle.png"
+      type="file"
+    />
+  </div>
+  <div
+    className="input-wrap"
+  >
+    <label
+      htmlFor="brand"
+    >
+      brand
+    </label>
+    <input
+      id="brand"
+      name="brand"
+      placeholder="brand"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="input-wrap"
+  >
+    <label
+      htmlFor="model"
+    >
+      model
+    </label>
+    <input
+      id="model"
+      name="model"
+      placeholder="model"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="input-wrap"
+  >
+    <label
+      htmlFor="year"
+    >
+      Year
+    </label>
+    <input
+      id="year"
+      name="year"
+      placeholder="2014"
+      required={true}
+      type="number"
+    />
+  </div>
+  <div
+    className="input-wrap"
+  >
+    <label
+      htmlFor="bookingfee"
+    >
+      Booking fee ($)
+    </label>
+    <input
+      id="bookingfee"
+      name="bookingfee"
+      placeholder="2400"
+      required={true}
+      type="number"
+    />
+  </div>
+  <div
+    className="input-wrap"
+  >
+    <label
+      htmlFor="description"
+    >
+      Description
+    </label>
+    <textarea
+      id="description"
+      name="description"
+      placeholder="designed by camilux in 2020, Palo alto"
+      type="textarea"
+    />
+  </div>
+  <button
+    className="btn-add-new"
+    type="submit"
+  >
+    Add new bike
+  </button>
+  <p
+    style={
+      Object {
+        "color": "#fff",
+        "margin": "5px",
+      }
+    }
+  />
+</form>
+`;
+
+exports[`Test Components test Details Page 1`] = `
+<div
+  className="detailsPage"
+>
+  <h2>
+    ...loading
+  </h2>
+</div>
+`;
+
+exports[`Test Components test Login Page 1`] = `
+<div
+  className="Login-form-container"
+>
+  <h2
+    className="Login-title"
+  >
+    Login
+  </h2>
+  <div
+    className="Login-form"
+  >
+    <input
+      className="login-name"
+      id="username"
+      onChange={[Function]}
+      placeholder="your name"
+      type="text"
+    />
+    <input
+      className="login-password"
+      id="password"
+      onChange={[Function]}
+      placeholder="Password"
+      type="password"
+    />
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Login
+    </button>
+    <p
+      className="login-message"
+    />
+    <p
+      className="Success-message"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      Wrong Combination of Username/Password
+    </p>
+  </div>
+  <div
+    className="dont-have-account"
+  >
+    <p
+      className="Login-message"
+    >
+      Don't have an account?
+    </p>
+    <a
+      href="/signup"
+      onClick={[Function]}
+    >
+      Signup
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Test Components test Main Page 1`] = `
+<section
+  className="main-page-container main-container"
+>
+  <h2>
+    There is no motorcycle yet! You can add a brand new 
+  </h2>
+  <div
+    className="next-previous-wrap"
+  >
+    <button
+      className="prev-next-btn previous-page colorGray"
+      onClick={[Function]}
+      type="button"
+    >
+      &lt;
+    </button>
+    <button
+      className="prev-next-btn next-page colorGray"
+      onClick={[Function]}
+      type="button"
+    >
+      &gt;
+    </button>
+  </div>
+</section>
+`;
+
+exports[`Test Components test Remove Page 1`] = `
+<div
+  className="reserve-form"
+>
+  <h2>
+    My motorcycles
+  </h2>
+</div>
+`;
+
+exports[`Test Components test Reserve Page 1`] = `
+<div
+  className="reserve-form"
+>
+  <h2>
+    Reserve a motorcycle
+  </h2>
+  <h2>
+    ...loading
+  </h2>
+</div>
+`;
+
+exports[`Test Components test Reserve Page 2`] = `
+<div
+  className="reservations"
+>
+  <h1>
+    My Reservations
+  </h1>
+  <div
+    className="reservation-container-main"
+  >
+    <div
+      className="reservation-container top-line"
+    >
+      <p
+        className="reservation-image"
+      >
+        Image
+      </p>
+      <p
+        className="reservation-brand"
+      >
+        Brand
+      </p>
+      <p
+        className="reservation-model"
+      >
+        Model
+      </p>
+      <p
+        className="reservation-total-price"
+      >
+        Total Price
+      </p>
+      <p
+        className="reservation-year"
+      >
+        Year
+      </p>
+      <p
+        className="reservation-startDate"
+      >
+        Start date
+      </p>
+      <p
+        className="reservation-endDate"
+      >
+        End date
+      </p>
+      <p>
+        Cancel
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Components test Signup Page 1`] = `
+<div
+  className="Login-form-container"
+>
+  <h2
+    className="Login-title"
+  >
+    Signup
+  </h2>
+  <div
+    className="Login-form"
+  >
+    <input
+      className="login-name"
+      id="username"
+      onChange={[Function]}
+      placeholder="your name"
+      type="text"
+    />
+    <input
+      className="login-password"
+      id="password"
+      onChange={[Function]}
+      placeholder="Password"
+      type="password"
+    />
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Signup
+    </button>
+    <p
+      className="login-message"
+    />
+  </div>
+  <div
+    className="dont-have-account"
+  >
+    <p>
+      Allready have an account?
+    </p>
+    <a
+      href="/main"
+      onClick={[Function]}
+    >
+      Sign In
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Test Components test SplashScreen Page 1`] = `
+<div
+  className="splashScreen"
+>
+  <div
+    className="splashScreen-overlay"
+  />
+  <h1
+    className="welcome-title"
+  >
+    BIKE STORE
+  </h1>
+  <p
+    className="p-laptop"
+  >
+    Discover the huge selection of motorbike clothing and accessories now at FC-Moto! Sale up to 60% Shipping with DHL and UPS. PayPal and Credit Card. Best offers. Great price and service. Brands: Held, Alpinestars, FOX.
+  </p>
+  <p
+    className="p-phone"
+  >
+    Discover the huge selection of motorbike clothing and accessories now at FC-Moto!
+  </p>
+</div>
+`;
+
+exports[`Test Components test UserAccount Page 1`] = `
+<div
+  className="userAcoount-container"
+>
+  <a
+    href="/main"
+    onClick={[Function]}
+  >
+    &lt; Back To Menu
+  </a>
+  <div
+    className="user-avatar-wrap"
+  >
+    <img
+      alt=""
+      className="user-avatar"
+      src="user-avatar.jpg"
+    />
+  </div>
+  <h2
+    className="UserName"
+  >
+    Azerty
+  </h2>
+  <div
+    className="logout-wrap"
+  >
+    <a
+      className="logOut"
+      href="/"
+      onClick={[Function]}
+    >
+      Logout
+    </a>
+  </div>
+</div>
+`;
